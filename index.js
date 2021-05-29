@@ -25,7 +25,8 @@ class Updater {
 
         //This should mean that we skipped the ip parameter but supplied the debug boolean.
         if (typeof ip === "boolean") {
-            debug = ip
+            debug = ip;
+            ip = null;
         }
 
         try {

@@ -1,6 +1,6 @@
 {
   "name": "do-dns-update",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Update a dns record through the DigitalOcean API",
   "main": "index.js",
   "author": "PintaLand (PintaLand@GitHub)",
