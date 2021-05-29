@@ -1,19 +1,19 @@
 {
   "name": "do-dns-update",
-  "version": "0.0.1",
-  "description": "Run on a server with dynamic external IP to update a dns record through the DigitalOcean API",
+  "version": "0.1.0",
+  "description": "Update a dns record through the DigitalOcean API",
   "main": "index.js",
-  "author": "pintapoff (Pintapoff@GitHub)",
-  "license": "MIT",
+  "author": "PintaLand (PintaLand@GitHub)",
+  "license": "ISC",
   "keywords": [
     "dynamic",
     "ip",
     "domain",
-    "digital ocean",    
+    "digital ocean",
     "api"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pintapoff/do-dns-update.git"
+    "url": "https://github.com/pintaland/do-dns-update.git"
   }
 }
