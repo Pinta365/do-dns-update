@@ -1,5 +1,12 @@
 # do-dns-update
 
+> **NOTICE**
+>
+> Package on NPM has been deprecated and will not recieve further updates, use JSR.
+>
+> A new version will be published and maintained on [JSR](https://jsr.io/@pinta365/do-dns-update) supporting multiple runtimes like Deno, Bun and Node.js
+>
+
 Update a dns record through the DigitalOcean API. 
 
 Personally im using it to make sure that my gaming server that is sitting behind a dynamic IP got a working subdomain pointing to it :) 

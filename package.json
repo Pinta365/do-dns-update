@@ -1,9 +1,9 @@
 {
   "name": "do-dns-update",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Update a dns record through the DigitalOcean API",
   "main": "index.js",
-  "author": "PintaLand (PintaLand@GitHub)",
+  "author": "Pinta365 (Pinta365@GitHub)",
   "license": "ISC",
   "keywords": [
     "dynamic",
