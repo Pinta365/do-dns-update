@@ -1,0 +1,13 @@
+{
+    "name": "@pinta365/do-dns-update",
+    "version": "0.3.0",
+    "exports": "./mod.ts",
+    "tasks": {
+        "publish-dry": "deno publish --dry-run"
+    },
+    "lock": false,
+    "fmt": {
+        "lineWidth": 120,
+        "indentWidth": 4
+    }
+}
