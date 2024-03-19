@@ -31,8 +31,8 @@ const manager = new RecordManager(apiKey);
 
 // Sets game.example.com to your current public IP
 const updatedRecord = await manager.setIP("game", "example.com");
-console.log(updatedRecord)
-// Output: 
+console.log(updatedRecord);
+// Output:
 // {
 //   success: true,                // true/false
 //   record: "game.example.com",   // affected record
@@ -40,11 +40,10 @@ console.log(updatedRecord)
 //   message: "Update successful"  // No update needed / Update successful
 // }
 
-
 // Or with an override IP of "123.123.123.123" instead of your current public IP
 const updatedRecord = await manager.setIP("game", "example.com", "123.123.123.123");
-console.log(updatedRecord)
-// Output: 
+console.log(updatedRecord);
+// Output:
 // {
 //   success: true,                // true/false
 //   record: "game.example.com",   // affected record
@@ -53,25 +52,23 @@ console.log(updatedRecord)
 // }
 ```
 
-
 Interfaces for the return objects
+
 ```ts
 //setIP()
-interface IPSetResponse {    
-    success: boolean;   // Indicates if the operation was successful.
-    record: string;     // The record (subdomain+domain) affected by the operation.
-    ip: string | null;  // The IP address set for the subdomain.
-    message: string;    // Message detailing the outcome of the operation.
+interface IPSetResponse {
+    success: boolean; // Indicates if the operation was successful.
+    record: string; // The record (subdomain+domain) affected by the operation.
+    ip: string | null; // The IP address set for the subdomain.
+    message: string; // Message detailing the outcome of the operation.
 }
-
-
 
 //setTTL()
 interface TTLSetResponse {
-    success: boolean;   // Indicates if the operation was successful.
-    record: string;     // The record (subdomain+domain) affected by the operation.
-    ttl: number;        // The time to live for the record, in seconds.
-    message: string;    // Message detailing the outcome of the operation.
+    success: boolean; // Indicates if the operation was successful.
+    record: string; // The record (subdomain+domain) affected by the operation.
+    ttl: number; // The time to live for the record, in seconds.
+    message: string; // Message detailing the outcome of the operation.
 }
 ```
 

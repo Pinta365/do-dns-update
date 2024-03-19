@@ -5,7 +5,7 @@ import { RecordManagerError } from "./src/errors.ts";
 /**
  * Represents the response from setting an IP address for a subdomain.
  */
-interface IPSetResponse {
+export interface IPSetResponse {
     /** Indicates if the operation was successful. */
     success: boolean;
     /** The record (subdomain+domain) affected by the operation. */
@@ -19,7 +19,7 @@ interface IPSetResponse {
 /**
  * Represents the response from setting an IP address for a subdomain.
  */
-interface TTLSetResponse {
+export interface TTLSetResponse {
     /** Indicates if the operation was successful. */
     success: boolean;
     /** The record (subdomain+domain) affected by the operation. */
@@ -33,7 +33,7 @@ interface TTLSetResponse {
 /**
  * Manages DNS records by interfacing with the Digital Ocean API
  */
-class RecordManager {
+export class RecordManager {
     /** The API key used for authentication with the API. */
     private apiKey: string;
 
@@ -128,5 +128,3 @@ class RecordManager {
         return returnObject;
     }
 }
-
-export { RecordManager };
