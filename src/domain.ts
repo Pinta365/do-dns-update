@@ -1,3 +1,4 @@
+import { APIError, DomainRecordNotFoundError } from "./errors.ts";
 /**
  * Represents a domain record.
  */
@@ -38,7 +39,7 @@ interface ListRecordsResponse {
  * @param apiKey The API key for authorization.
  * @param data Optional data to be sent with the request.
  * @returns A Promise resolving to the fetched data.
- * @throws {Error} Throws an error if the API request fails.
+ * @throws {APIError} Throws an error if the API request fails.
  */
 async function fetchAPI(endpoint: string, method: string, apiKey: string, data?: unknown): Promise<unknown> {
     const url = `https://api.digitalocean.com/v2/${endpoint}`;
@@ -61,8 +62,8 @@ async function fetchAPI(endpoint: string, method: string, apiKey: string, data?:
         return response.json();
     }
 
-    console.log(response)
-    throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+    console.log(response);
+    throw new APIError("Problem fetching data from API", response.status, response.statusText);
 }
 
 /**
@@ -110,7 +111,7 @@ export async function getRecord(apiKey: string, subdomain: string, domain: strin
     const recordsResponse: ListRecordsResponse = await listRecords(apiKey, domain);
     const record = recordsResponse.domain_records.find((r) => r.name === subdomain);
     if (!record) {
-        throw new Error(`Record "${subdomain}" not found in "${domain}"`);
+        throw new DomainRecordNotFoundError(`Record "${subdomain}" not found in "${domain}"`);
     }
     return record;
 }
