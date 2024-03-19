@@ -76,6 +76,6 @@ interface TTLSetResponse {
 
 **RecordManager Class**
 
-`setIP`(subdomain: string, domain: string, ipOverride: string | null = null);
+`setIP`(subdomain: string, domain: string, ipOverride: string | null = null): IPSetResponse;
 
-`setTTL`(subdomain: string, domain: string, ttl: number);
+`setTTL`(subdomain: string, domain: string, ttl: number): TTLSetResponse;
